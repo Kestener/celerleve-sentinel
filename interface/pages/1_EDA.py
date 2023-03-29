@@ -1,5 +1,4 @@
 import streamlit as st
-import leafmap.foliumap as leafmap
 from streamlit_image_comparison import image_comparison
 import base64
 
