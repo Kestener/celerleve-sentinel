@@ -26,7 +26,7 @@ DEFAULT_DETECT_IMAGE = IMAGES_DIR / 'celerleve_default_pred.jpg'
 
 # model
 MODEL_DIR = ROOT / 'weights'
-DETECTION_MODEL = MODEL_DIR / 'celerleve_yolov8_v1.pt'
+DETECTION_MODEL = MODEL_DIR / 'cereleve_yolov8m_v1.pt'
 SEGMENTATION_MODEL = MODEL_DIR / 'yolov8n-seg.pt'
 
 # Detected/segmented image dirpath locator
