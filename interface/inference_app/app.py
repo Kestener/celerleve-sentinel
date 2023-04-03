@@ -15,6 +15,28 @@ model = helper.load_model(model_path)
 st.set_page_config(page_icon='📡', 
                    page_title='Landslide Detector')
 st.title("📡 Landslide Path Detector")
+
+st.markdown(
+    """
+Explore the capabilities of YOLO custom models to identify and analyze landslides in 
+satellite and aerial images. This web application  features two models for landslide 
+detection: **Object detection** (bounding box) and **Instance segmentation** (object shape). 
+The confidence threshold can be controlled with the slider, allowing you to fine-tune 
+the results based on specific requirements. This application is a prototype that deliver 
+fairly accurate results, providing both bounding boxes and pixel locations for each 
+detected landslide as output.
+    """
+)
+
+st.markdown(
+    """
+    This is an open-source project and you are very welcome to contribute your comments, 
+    questions, and resources as [issues](https://github.com/Kestener/celerleve-sentinel/issues) 
+    or [pull requests](https://github.com/Kestener/celerleve-sentinel/pulls) to the 
+    [GitHub repository](https://github.com/Kestener/celerleve-sentinel).
+    """
+)
+
 st.sidebar.image('images/celerleve_logo_small.jpg')
 st.sidebar.header("Model Settings")
 
@@ -82,7 +104,7 @@ if source_radio == settings.IMAGE:
                     res = model.predict(
                         image, save=save, save_txt=save, exist_ok=True, conf=conf)
                     boxes = res[0].boxes
-                    res_plotted = res[0].plot(line_width=2, font_size=1)[:, :, ::-1]
+                    res_plotted = res[0].plot(line_width=1, font_size=1)[:, :, ::-1]
                     st.image(res_plotted, caption='Detected Image')
                 #    IMAGE_DOWNLOAD_PATH = f"runs/{dirpath_locator}/predict/image0.jpg"
                 #    with open(IMAGE_DOWNLOAD_PATH, 'rb') as fl:
