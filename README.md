@@ -5,6 +5,8 @@ This repository provides the code required to replicate the figures and function
 
 It also provides examples of the generalizability of this approach, enabling users with limited computing resources and basic knowledge in machine learning or satellite imagery processing to train and utilize the application for custom objects.
 
+![interface_example](../celerleve-sentinel/interface/inference_app/images/interface_example.png)
+
 ## Structure of the repository
 
 ### 1. Installation
